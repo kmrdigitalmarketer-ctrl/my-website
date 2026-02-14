@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Zubair ❤️ Arshu</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins;}
+body{
+    opacity:0;
+    animation:fadePage 1.5s ease forwards;
+}
+
+@keyframes fadePage{
+    to{opacity:1;}
+}
+
+body {
+    background:#12001a;
+    color:white;
+    overflow-x:hidden;
+    scroll-behavior:smooth;
+}
+
+
+audio{display:none;}
+
+section{padding:100px 20px;text-align:center;}
+
+.hero{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:radial-gradient(circle at top, #ff4b7d, #12001a);
+}
+
+.hero h1{
+    font-family:'Great Vibes',cursive;
+    font-size:75px;
+}
+
+.hero p{
+    font-family:'Great Vibes',cursive;
+    font-size:45px;
+    margin-top:10px;
+}
+.hero h1,.hero p{
+    text-shadow:0 0 10px #ff4b7d, 0 0 20px #ff4b7d;
+}
+
+.quote{background:#1a0025;}
+.quote h2{font-family:'Great Vibes',cursive;font-size:50px;margin-bottom:20px;}
+
+.gallery h2,.proposal h2{
+    font-family:'Great Vibes',cursive;
+    font-size:50px;
+    margin-bottom:30px;
+}
+.hero-line{
+    font-family:'Great Vibes',cursive;
+    font-size:42px;
+    margin-top:15px;
+    text-shadow:0 0 10px #ff4b7d, 0 0 20px #ff4b7d;
+}
+
+.photos{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+    max-width:1200px;
+    margin:auto;
+}
+
+.photos img{
+    width:260px;
+    height:360px;   /* perfect for portrait photos */
+    object-fit:cover;
+    object-position:top;  /* important – keeps face visible */
+    border-radius:25px;
+    box-shadow:0 0 30px #ff4b7d;
+    transition:0.4s ease;
+}
+
+.photos img:hover{
+    transform:scale(1.05);
+}
+
+.photos img:hover{
+    transform:scale(1.08) rotateY(8deg);
+    box-shadow:0 0 40px #ff4b7d, 0 0 80px #ff4b7d;
+}
+
+
+
+/* Hearts */
+.heart{
+    position:fixed;
+    bottom:-10px;
+    color:#ff4b7d;
+    animation:float 6s linear infinite;
+    opacity:.8;
+}
+@keyframes float{
+    0%{transform:translateY(0) scale(0);}
+    100%{transform:translateY(-120vh) scale(1);}
+}
+
+/* Fireworks */
+.spark{
+    position:fixed;
+    width:6px;
+    height:6px;
+    background:#fff;
+    border-radius:50%;
+    animation:spark 1.5s linear infinite;
+}
+@keyframes spark{
+    0%{transform:scale(0);opacity:1;}
+    100%{transform:scale(3);opacity:0;}
+}
+
+.letter{
+    background:#1a0025;
+    padding:100px 20px;
+    text-align:center;
+}
+.letter h2{
+    font-family:'Great Vibes',cursive;
+    font-size:50px;
+    margin-bottom:20px;
+}
+.letter p{
+    max-width:700px;
+    margin:auto;
+    font-size:20px;
+    line-height:1.7;
+}
+.love-card:nth-child(1) h3{ color:#7a003c; }  /* wine */
+.love-card:nth-child(2) h3{ color:#4a0025; }  /* deep maroon */
+.love-card:nth-child(3) h3{ color:#5a0f2e; }  /* dark rose */
+.love-card p,
+.love-card li{
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 17px;
+  letter-spacing: .4px;
+  color: #5a0f2e;  /* soft dark romantic */
+}
+
+.love-cards{
+  background: linear-gradient(135deg,#ffdde1,#ee9ca7);
+  padding:80px 20px;
+  text-align:center;
+}
+
+.love-cards h2{
+  font-family:'Great Vibes',cursive;
+  font-size:48px;
+  color:#fff;
+  margin-bottom:40px;
+}
+
+.cards-wrap{
+  display:flex;
+  gap:20px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.love-card{
+  background:rgba(255,255,255,0.25);
+  color:#fff;
+  padding:25px;
+  border-radius:18px;
+  width:280px;
+  backdrop-filter:blur(10px);
+  box-shadow:0 8px 20px rgba(0,0,0,0.15);
+  transition:transform 0.3s;
+}
+
+.love-card:hover{
+  transform:translateY(-8px);
+}
+
+.love-card h3{
+  font-size:24px;
+  margin-bottom:10px;
+}
+
+.love-card ul{
+  list-style:none;
+  padding:0;
+}
+
+.love-card li,
+.love-card p{
+  font-size:17px;
+  margin:8px 0;
+}
+.love-card{
+  opacity:0;
+  transform:translateY(30px);
+  animation:fadeUp 1s ease forwards;
+}
+
+.love-card:nth-child(1){animation-delay:.2s;}
+.love-card:nth-child(2){animation-delay:.5s;}
+.love-card:nth-child(3){animation-delay:.8s;}
+
+@keyframes fadeUp{
+  to{opacity:1;transform:translateY(0);}
+}
+.final-love{
+  padding: 50px 15px;
+  max-width: 700px;
+  margin: 60px auto;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #ff4b7d33, #12001a);
+  box-shadow: 0 0 20px #ff4b7d55;
+  text-align:center;
+}
+
+.final-love h1{
+  font-family:'Great Vibes',cursive;
+  font-size:42px;   /* smaller */
+  animation:pulse 2s infinite;
+}
+
+.final-love p{
+  font-size:16px;
+  margin-top:6px;
+  opacity:.85;
+}
+
+</style>
+</head>
+
+<body>
+
+<audio autoplay loop>
+    <source src="music/love.mp3" type="audio/mpeg">
+</audio>
+
+<section class="hero">
+    <div>
+        <h1>Happy Valentine’s Day</h1>
+       <p class="hero-line">To My Arshu ❤️ Zubair Forever Yours</p>
+    </div>
+</section>
+
+<section class="quote">
+    <h2>My Love</h2>
+    <p>
+        You are my heart, my happiness, my home.  
+        In your smile I find my peace,  
+        in your love I find my forever. ❤️
+    </p>
+</section>
+
+<section class="gallery">
+    <h2>Our Beautiful Moments</h2>
+    <div class="photos">
+        <img src="images/1.jpg.jpeg">
+<img src="images/4.jpg.jpeg">
+<img src="images/2.jpg.jpg">
+<img src="images/3.jpg.jpg">
+    </div>
+</section>
+
+<section class="letter">
+    <h2>Her Words to Me 💌</h2>
+    <p>
+        My Love,<br><br>
+        I just wanted to take a moment to tell you how much you mean to me.
+        You brighten my days in ways I never thought possible.<br><br>
+
+        From the way you hold my hand to the way we share quiet moments together,
+        every little thing about us makes my heart feel full. ❤️<br><br>
+
+        Thank you for loving me so completely, for being my support,
+        my confidant, and my best friend.
+        You are truly the greatest gift in my life, and I’ll never take that for granted. ❤️<br><br>
+
+        I will love you as long as the sun burns in the sky,
+        as long as the moon shines its light.
+        I will love you until the end of time.<br><br>
+    </p>
+</section>
+<section class="proposal">
+    <h2>My Promise 💍</h2>
+    <p>
+        Arshu, will you be mine forever?  
+        I choose you today, tomorrow, and always ❤️
+    </p>
+</section>
+<section class="love-cards">
+  <h2>My Love Story With You 💖</h2>
+
+  <div class="cards-wrap">
+
+    <div class="love-card">
+      <h3>Why You’re Special 💕</h3>
+      <ul>
+        <li>Your smile is my peace</li>
+        <li>You understand me deeply</li>
+        <li>You make my world brighter</li>
+        <li>You are my safe place</li>
+        <li>You are my forever</li>
+      </ul>
+    </div>
+
+    <div class="love-card">
+      <h3>From My Heart 💌</h3>
+      <p>
+        Arshu, every heartbeat whispers your name.  
+        You are not just my love, you are my home.  
+        Forever yours,  
+        <strong>Zubair ❤️</strong>
+      </p>
+    </div>
+
+    <div class="love-card">
+      <h3>Our Journey ✨</h3>
+      <p>💞 The day I met you</p>
+      <p>💖 The day I fell for you</p>
+      <p>💍 The day you became my world</p>
+    </div>
+
+  </div>
+</section>
+<section class="final-love">
+  <h1>I Love You ❤️</h1>
+  <p>Forever & Always, Arshu</p>
+</section>
+
+<script>
+// floating hearts
+setInterval(()=>{
+    let h=document.createElement("div");
+    h.className="heart";
+    h.innerHTML="❤️";
+    h.style.left=Math.random()*100+"vw";
+    h.style.fontSize=(10+Math.random()*30)+"px";
+    h.style.animationDuration=(4+Math.random()*4)+"s";
+    document.body.appendChild(h);
+    setTimeout(()=>h.remove(),6000);
+},400);
+
+// fireworks sparkles
+setInterval(()=>{
+    let s=document.createElement("div");
+    s.className="spark";
+    s.style.left=Math.random()*100+"vw";
+    s.style.top=Math.random()*100+"vh";
+    document.body.appendChild(s);
+    setTimeout(()=>s.remove(),1500);
+},200);
+</script>
+
+</body>
+</html>
