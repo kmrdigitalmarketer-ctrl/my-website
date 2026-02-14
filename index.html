@@ -240,15 +240,28 @@ section{padding:100px 20px;text-align:center;}
 
 <body>
 
-<audio id="bgMusic" loop>
+<audio id="bgMusic" loop preload="auto">
     <source src="music/love.mp3" type="audio/mpeg">
 </audio>
 
 <script>
-document.addEventListener("click", function () {
-    document.getElementById("bgMusic").play();
-}, { once: true });
+let musicStarted = false;
+
+function startMusic() {
+    if (!musicStarted) {
+        const music = document.getElementById("bgMusic");
+        music.play().then(() => {
+            musicStarted = true;
+        }).catch(err => {
+            console.log("Autoplay blocked:", err);
+        });
+    }
+}
+
+document.addEventListener("click", startMusic);
+document.addEventListener("touchstart", startMusic);
 </script>
+
 
 
 <section class="hero">
@@ -370,6 +383,7 @@ setInterval(()=>{
 
 </body>
 </html>
+
 
 
 
